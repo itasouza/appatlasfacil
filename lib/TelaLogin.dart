@@ -2,7 +2,7 @@ import 'package:appatlasfacil/config/ui_icons.dart';
 import 'package:appatlasfacil/src/widgets/SocialMediaWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'TelaFiltros.dart';
 
 class TelaLogin extends StatefulWidget {
   @override
@@ -96,13 +96,20 @@ class _TelaLoginState extends State<TelaLogin> {
                         padding: EdgeInsets.symmetric(vertical: 12, horizontal: 70),
                         onPressed: () {
                           // 2 number refer the index of Home page
-                          Navigator.of(context).pushNamed('/Tabs', arguments: 2);
+                          //Navigator.of(context).pushNamed('/Tabs', arguments: 2);
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (context) => TelaFiltros()
+                          )
+                          );
+
                         },
-                        child: Text(
-                          'Login',
-                          style: Theme.of(context).textTheme.title.merge(
-                            TextStyle(color: Theme.of(context).primaryColor),
-                          ),
+                        child: GestureDetector(
+                          child: Text(
+                            'Login',
+                            style: Theme.of(context).textTheme.title.merge(
+                              TextStyle(color: Theme.of(context).primaryColor),
+                            ),
+                          )
                         ),
                         color: Theme.of(context).accentColor,
                         shape: StadiumBorder(),

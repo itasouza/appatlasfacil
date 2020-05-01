@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'TelaSplash.dart';
 
-
-
 class TelaApresentacao extends StatefulWidget {
   @override
   _TelaApresentacaoState createState() => _TelaApresentacaoState();
