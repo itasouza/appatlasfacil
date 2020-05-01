@@ -96,7 +96,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                         Navigator.of(context).pushNamed('/SignIn');
                       },
                       child:Text(
-                            'Skip',
+                            'Próximo',
                             style: Theme.of(context).textTheme.display1.merge(
                                   TextStyle(color: Theme.of(context).primaryColor),
                                 ),

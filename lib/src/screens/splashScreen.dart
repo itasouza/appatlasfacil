@@ -14,7 +14,7 @@ class _SplashState extends State<Splash> {
       seconds: 8,
       navigateAfterSeconds: new OnBoardingWidget(),
       title: new Text(
-        ' Business Listing \n Directory ',
+        ' Bem vindo \n a empresa teste ',
         textAlign: TextAlign.center,
         style: new TextStyle(
           fontWeight: FontWeight.bold,
