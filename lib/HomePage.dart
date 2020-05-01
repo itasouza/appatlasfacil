@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'TelaOrdemServico.dart';
 
+import 'TelaEmpresa.dart';
+import 'TelaServico.dart';
+import 'TelaContato.dart';
+import 'TelaCliente.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -10,10 +13,25 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  void _abrirOrdemServico(){
+  void _abrirEmpresa(){
     Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => TelaOrdemServico()));
+        MaterialPageRoute(builder: (context) => TelaEmpresa()));
+  }
+  void _abrirServico(){
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => TelaServico()));
+  }
+  void _abrirCliente(){
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => TelaCliente()));
+  }
+  void _abrirContato(){
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => TelaContato()));
   }
 
 
@@ -32,19 +50,19 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset("img/brazil.jpg"),
+              Image.asset("imagens/menu_empresa.png"),
               Padding(
                 padding: EdgeInsets.only(top: 32),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     GestureDetector(
-                      onTap: _abrirOrdemServico,
-                      child: Image.asset("img/brazil.jpg"),
+                      onTap: _abrirEmpresa,
+                      child: Image.asset("imagens/menu_empresa.png"),
                     ),
                     GestureDetector(
-                      onTap: _abrirOrdemServico,
-                      child: Image.asset("img/brazil.jpg"),
+                      onTap: _abrirServico,
+                      child: Image.asset("imagens/menu_servico.png"),
                     ),
                   ],
                 ),
@@ -55,12 +73,12 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     GestureDetector(
-                      onTap: _abrirOrdemServico,
-                      child: Image.asset("img/brazil.jpg"),
+                      onTap: _abrirCliente,
+                      child: Image.asset("imagens/menu_cliente.png"),
                     ),
                     GestureDetector(
-                      onTap: _abrirOrdemServico,
-                      child: Image.asset("img/brazil.jpg"),
+                      onTap: _abrirContato,
+                      child: Image.asset("imagens/menu_contato.png"),
                     ),
                   ],
                 ),
