@@ -3,6 +3,8 @@ import 'package:appatlasfacil/TelaLogin.dart';
 import 'package:flutter/material.dart';
 import 'package:appatlasfacil/route_generator.dart';
 
+import 'TelaApresentacao.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-     // home: TelaLogin(),
+      //home: TelaApresentacao(),
+      //home: TelaLogin(),
 
 
       //para visualizar todas as páginas
