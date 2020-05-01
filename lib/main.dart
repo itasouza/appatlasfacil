@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //home: TelaApresentacao(),
+      home: TelaApresentacao(),
       //home: TelaLogin(),
 
 
       //para visualizar todas as páginas
-       initialRoute: '/',
-       onGenerateRoute: RouteGenerator.generateRoute,
+      // initialRoute: '/',
+       //onGenerateRoute: RouteGenerator.generateRoute,
 
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
