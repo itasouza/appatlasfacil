@@ -41,16 +41,18 @@ class _TelaSplashState extends State<TelaSplash> {
                   return Builder(
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(16),
-                            child: Image.asset(
-                              boarding.image,
-                              width: 480,
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(16),
+                              child: Image.asset(
+                                boarding.image,
+                                width: 480,
+                              ),
                             ),
                           ),
+
                           Center(
                             child: Container(
                               padding: const EdgeInsets.all(16),
