@@ -1,6 +1,7 @@
 import 'package:appatlasfacil/config/app_config.dart' as config;
 import 'package:appatlasfacil/TelaLogin.dart';
 import 'package:flutter/material.dart';
+import 'package:appatlasfacil/route_generator.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,6 +11,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: TelaLogin(),
+
+      /*
+      //para visualizar todas as páginas
+       initialRoute: '/',
+       onGenerateRoute: RouteGenerator.generateRoute,
+       */
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
         fontFamily: 'Poppins',
