@@ -1,7 +1,7 @@
 import 'package:appatlasfacil/config/ui_icons.dart';
-import 'package:appatlasfacil/src/widgets/SocialMediaWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'TelaFiltros.dart';
 
 
 class TelaLogin extends StatefulWidget {
@@ -40,7 +40,7 @@ class _TelaLoginState extends State<TelaLogin> {
                         style: TextStyle(color: Theme.of(context).focusColor),
                         keyboardType: TextInputType.emailAddress,
                         decoration: new InputDecoration(
-                          hintText: 'Endereço de email',
+                          hintText: 'login',
                           hintStyle: Theme.of(context).textTheme.body1.merge(
                             TextStyle(color: Theme.of(context).focusColor.withOpacity(0.6)),
                           ),
@@ -85,7 +85,12 @@ class _TelaLoginState extends State<TelaLogin> {
                       ),
                       SizedBox(height: 20),
                       FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => TelaFiltros()));
+                        },
                         child: Text(
                           'Esqueceu sua senha ?',
                           style: Theme.of(context).textTheme.body1,
@@ -95,8 +100,10 @@ class _TelaLoginState extends State<TelaLogin> {
                       FlatButton(
                         padding: EdgeInsets.symmetric(vertical: 12, horizontal: 70),
                         onPressed: () {
-                          // 2 number refer the index of Home page
-                          Navigator.of(context).pushNamed('/Tabs', arguments: 2);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => TelaFiltros()));
                         },
                         child: Text(
                           'Login',
@@ -108,32 +115,12 @@ class _TelaLoginState extends State<TelaLogin> {
                         shape: StadiumBorder(),
                       ),
                       SizedBox(height: 50),
-                      Text(
-                        'Ou usando mídias sociais',
-                        style: Theme.of(context).textTheme.body1,
-                      ),
                       SizedBox(height: 20),
-                      new SocialMediaWidget()
+
                     ],
                   ),
                 ),
               ],
-            ),
-            FlatButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/SignUp');
-              },
-              child: RichText(
-                text: TextSpan(
-                  style: Theme.of(context).textTheme.title.merge(
-                    TextStyle(color: Theme.of(context).primaryColor),
-                  ),
-                  children: [
-                    TextSpan(text: 'Você não tem uma conta?'),
-                    TextSpan(text: ' Inscrever-se', style: TextStyle(fontWeight: FontWeight.w700)),
-                  ],
-                ),
-              ),
             ),
           ],
         ),

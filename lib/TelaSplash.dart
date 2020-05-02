@@ -108,7 +108,7 @@ class _TelaSplashState extends State<TelaSplash> {
                                 builder: (context) => TelaLogin()));
                       },
                       child: Text(
-                        'Próximo',
+                        'Seguir',
                         style: Theme.of(context).textTheme.display1.merge(
                               TextStyle(color: Theme.of(context).primaryColor),
                             ),
