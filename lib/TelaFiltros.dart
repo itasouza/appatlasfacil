@@ -179,7 +179,7 @@ class _TelaFiltrosState extends State<TelaFiltros> {
                 padding: EdgeInsets.symmetric(horizontal: 35, vertical: 8),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Languages()));
+                      MaterialPageRoute(builder: (context) => TelaLogin()));
                 },
                 child: Text(
                   'Seguir',
